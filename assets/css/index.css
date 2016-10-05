@@ -105,11 +105,17 @@ body {
   border-radius: 3px;
   background-color: #fde700;
   text-transform: uppercase;
-}
-
-.applyNow a{
   text-decoration: none;
   color: black;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
+}
+
+.applyNow:hover{
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid #fde700;
+  color: #fde700;
 }
 
 
@@ -197,6 +203,8 @@ body {
   border-radius: 5px;
   padding: 8px;
   margin-top: -9px;
+  transition: none 500ms ease-out;
+  transition-property: color, background;
 }
 
 .floatRight li:hover {
@@ -206,10 +214,7 @@ body {
   background-color: black;
   padding: 8px;
   margin-top: -9px;
-}
-
-.floatRight li:hover a{
-  color: white;
+  color: #fde700;
 }
 
 .splashbg {
