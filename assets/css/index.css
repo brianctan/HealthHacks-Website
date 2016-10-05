@@ -45,8 +45,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.splashbg{
-
+.splashbg {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
 }
 
 .centered {
@@ -215,12 +219,4 @@ body {
   padding: 8px;
   margin-top: -9px;
   color: #fde700;
-}
-
-.splashbg {
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  overflow: hidden;
 }
