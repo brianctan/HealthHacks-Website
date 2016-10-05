@@ -1,0 +1,221 @@
+@font-face {
+  font-family: Lane Narrow;
+  src: url(fonts/LANENAR.ttf);
+}
+
+@font-face {
+  font-family: Gotham Bold;
+  src: url(fonts/GothamBold.ttf);
+}
+
+@font-face {
+  font-family: Gotham Light;
+  src: url(fonts/GothamLight.ttf);
+}
+
+@font-face {
+  font-family: Melbourne;
+  src: url(fonts/Melbourne.otf);
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Melbourne', sans-serif;
+}
+
+.section {
+  background-color: black;
+  display: block;
+  height: 100vh;
+}
+
+.section .splashscreen {
+  background-color: black;
+  display: block;
+  height: 100vh;
+}
+
+.section.about {
+  background: url(../img/greybackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.splashbg{
+
+}
+
+.centered {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  max-height: 350px;
+  margin: auto;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 680px){
+  .centered {
+    display: block;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}
+
+.textContainer {
+  width:100%;
+  text-align: center;
+}
+
+.splashText {
+  color: #eeeeee;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 48px;
+  color: #fde700;
+}
+
+.subText {
+  color: #eeeeee;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-family: "Melbourne", sans-serif;
+  font-size: 24px;
+  color: #eeeeee;
+  line-height: 1.5;
+}
+
+.applyNow {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #fde700;
+  text-transform: uppercase;
+}
+
+.applyNow a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.customNavbar {
+  background-color: #fde700;
+  border: 1px solid lightgrey;
+  display: block;
+  height:60px;
+}
+
+.customNavbar.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logoDiv{
+  float: left;
+  padding-left:20px;
+}
+
+.customNavbar .logoDiv .logoImage{
+  display: inline-block;
+  vertical-align: middle;
+  float:left;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.logoDiv .logoText{
+  font-family: 'Lane Narrow', sans-serif;
+  font-size: 20px;
+  margin-top: 17px;
+  padding-left: 0px;
+  color: black;
+  float:left;
+  text-transform: uppercase;
+}
+
+.logoDiv span{
+  font-family: 'Lane Narrow', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding-left: 10px;
+  color: black;
+  float:left;
+  text-transform: uppercase;
+}
+
+.navlinks ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+.navlinks li {
+  font-family: 'Gotham Light', sans-serif;
+  display: inline-block;
+  margin-top: 7px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.floatLeft {
+  float:right;
+}
+
+.floatRight {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.floatRight li {
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: -9px;
+}
+
+.floatRight li:hover {
+  text-transform: uppercase;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  padding: 8px;
+  margin-top: -9px;
+}
+
+.floatRight li:hover a{
+  color: white;
+}
+
+.splashbg {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
