@@ -40,7 +40,7 @@ body {
 }
 
 .section.about {
-  background: url(../img/greybackground.jpg);
+  background-color: #222222;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -125,9 +125,10 @@ body {
 
 .customNavbar {
   background-color: #fde700;
-  border: 1px solid lightgrey;
   display: block;
   height:60px;
+  position: absolute;
+  width: 100%;
 }
 
 .customNavbar.fixed{
@@ -148,6 +149,34 @@ body {
   float:left;
   margin-top: 10px;
   height: 40px;
+}
+
+@media screen and (max-width: 993px){
+  #hamburger {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25px;
+      height: 25px;
+      background-image: url(../img/hamburger+arrow2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top left;
+      margin: 15px;
+      margin-left: 0;
+      margin-right: 25px;
+      transition: transform 0.2s;
+  }
+  .navlinks {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 993px){
+  #hamburger {
+      display: none;
+  }
 }
 
 .logoDiv .logoText{
@@ -195,6 +224,17 @@ body {
   float:right;
 }
 
+.floatLeft li:hover {
+  text-decoration: none;
+  transition: none 200ms ease-out;
+
+}
+
+.floatLeft li:hover a {
+  font-family: Gotham Bold, sans-serif;
+
+}
+
 .floatRight {
   float: right;
   margin-top: 20px;
@@ -207,7 +247,7 @@ body {
   border-radius: 5px;
   padding: 8px;
   margin-top: -9px;
-  transition: none 500ms ease-out;
+  transition: none 200ms ease-out;
   transition-property: color, background;
 }
 
@@ -216,7 +256,96 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   background-color: black;
+
   padding: 8px;
   margin-top: -9px;
   color: #fde700;
+}
+
+.aboutcolumn, .aboutText {
+  display: block;
+  width: 50%;
+  padding-top: 150px;
+  float: left;
+}
+
+.aboutcolumn {
+  text-align: center;
+}
+
+.aboutLogo {
+  max-width: 300px;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.centeralign {
+}
+
+@media screen and (max-width: 760px){
+  .aboutcolumn, .aboutText {
+    width: 100%;
+    float: left;
+  }
+  .aboutcolumn {
+    padding-top: 100px;
+  }
+  .aboutText {
+    padding-top: 0;
+    box-sizing: border-box;
+  }
+  .aboutText h1 {
+    padding-top: 0;
+    font-family: Gotham Bold, sans-serif;
+    color: #dddddd;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-bottom: -5px;
+  }
+  .section.about{
+    height: 130vh;
+  }
+  .content p{
+    font-family: Gotham Light, sans-serif;
+    color: #dddddd;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 16px;
+    max-width: 520px;
+    padding: 0 50px;
+    margin: auto;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 760px){
+  .aboutText h1 {
+    padding-top:180px;
+    font-family: Gotham Bold, sans-serif;
+    color: #dddddd;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 48px;
+    margin-bottom: -5px;
+  }
+  .content p{
+    font-family: Gotham Light, sans-serif;
+    color: #dddddd;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    max-width: 480px;
+  }
+  .aboutText {
+    padding: 0 50px;
+    padding-left: 0px;
+    box-sizing: border-box;
+  }
+}
+
+
+
+.pulseline {
+
 }
