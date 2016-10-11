@@ -81,7 +81,6 @@ body {
 }
 
 .splashText {
-  color: #eeeeee;
   display: block;
   text-align: center;
   margin: auto;
@@ -275,14 +274,13 @@ body {
 
 .aboutLogo {
   max-width: 300px;
-  padding: 0 20px;
   margin-top: 30px;
 }
 
 .centeralign {
 }
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 810px){
   .aboutcolumn, .aboutText {
     width: 100%;
     float: left;
@@ -304,7 +302,7 @@ body {
     margin-bottom: -5px;
   }
   .section.about{
-    height: 130vh;
+    height: 135vh;
   }
   .content p{
     font-family: Gotham Light, sans-serif;
@@ -319,9 +317,9 @@ body {
   }
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 811px){
   .aboutText h1 {
-    padding-top:180px;
+    padding-top:170px;
     font-family: Gotham Bold, sans-serif;
     color: #dddddd;
     text-align: left;
@@ -335,7 +333,8 @@ body {
     text-align: left;
     line-height: 1.5;
     font-size: 16px;
-    max-width: 480px;
+    max-width: 465px;
+    margin-top: 20px;
   }
   .aboutText {
     padding: 0 50px;
@@ -344,6 +343,25 @@ body {
   }
 }
 
+.section.slideshow {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/meetspeakers.jpg);
+  background-size: cover;
+  background-position: 50% 10%;
+  height: 91vh;
+}
+
+h1 {
+  color: #eeeeee;
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-family: "Gotham Bold", sans-serif;
+  font-size: 48px;
+}
+
+.sectionheader {
+  padding-top: 50px;
+}
 
 
 .pulseline {
