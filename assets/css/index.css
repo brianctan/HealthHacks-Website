@@ -24,16 +24,24 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Melbourne', sans-serif;
+  font-family: 'Gotham Light', sans-serif;
+}
+
+.clear{
+  clear: both;
+  margin: 0;
+  padding: 0;
 }
 
 .section {
   background-color: black;
   display: block;
   height: 100vh;
+  overflow: hidden;
 }
 
-.section .splashscreen {
+.section.splashscreen {
+  min-height: 500px;
   background-color: black;
   display: block;
   height: 100vh;
@@ -94,8 +102,8 @@ body {
   display: block;
   text-align: center;
   margin: auto;
-  font-family: "Melbourne", sans-serif;
-  font-size: 24px;
+  font-family: "Gotham Light", sans-serif;
+  font-size: 20px;
   color: #eeeeee;
   line-height: 1.5;
 }
@@ -135,6 +143,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  box-shadow: 1px 1px 5px #555555;
 }
 
 .logoDiv{
@@ -209,7 +218,6 @@ body {
   margin-top: 7px;
   margin-right: 10px;
   font-size: 15px;
-  font-weight: bolder;
 }
 
 .navlinks a {
@@ -225,12 +233,16 @@ body {
 
 .floatLeft li:hover {
   text-decoration: none;
-  transition: none 200ms ease-out;
+  transition: all 1000ms ease-out;
+  transition-property: color, background;
 
 }
 
 .floatLeft li:hover a {
-  font-family: Gotham Bold, sans-serif;
+  font-weight: 900;
+  color: #000000;
+  transition: all 1000ms ease-out;
+  transition-property: color, background;
 
 }
 
@@ -277,6 +289,14 @@ body {
   margin-top: 30px;
 }
 
+@media screen and (max-width: 810px){
+  .aboutLogo {
+    max-width: 200px;
+    margin-top: 0px;
+  }
+}
+
+
 .centeralign {
 }
 
@@ -298,11 +318,12 @@ body {
     color: #dddddd;
     text-align: center;
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: -5px;
+    letter-spacing: 5px;
   }
   .section.about{
-    height: 135vh;
+    height: 150vh;
   }
   .content p{
     font-family: Gotham Light, sans-serif;
@@ -319,13 +340,14 @@ body {
 
 @media screen and (min-width: 811px){
   .aboutText h1 {
-    padding-top:170px;
+    padding-top: 170px;
     font-family: Gotham Bold, sans-serif;
     color: #dddddd;
     text-align: left;
     text-transform: uppercase;
     font-size: 48px;
     margin-bottom: -5px;
+    letter-spacing: 5px;
   }
   .content p{
     font-family: Gotham Light, sans-serif;
@@ -343,27 +365,291 @@ body {
   }
 }
 
-.section.slideshow {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/meetspeakers.jpg);
+.slideshow1 {
+  background-size: cover;
+  background-position: 50% 10%;
+  height: 91vh;
+  display: none;
+}
+
+.slideshow2 {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/funandprizes2.jpg);
   background-size: cover;
   background-position: 50% 10%;
   height: 91vh;
 }
 
-h1 {
-  color: #eeeeee;
-  display: block;
-  text-align: center;
-  margin: auto;
-  font-family: "Gotham Bold", sans-serif;
-  font-size: 48px;
+@media screen and (max-width:518px) {
+  .sectionheader h1 {
+    color: #eeeeee;
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-family: "Gotham Bold", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width:519px) {
+  .sectionheader h1 {
+    color: #eeeeee;
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-family: "Gotham Bold", sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
 }
 
 .sectionheader {
   padding-top: 50px;
 }
 
+@media screen and (max-width:518px) {
+  .slidetext h1 {
+    margin: auto;
+    margin-top: 30vh;
+    text-align: center;
+    font-family: Gotham Light, sans-serif;
+    color: #eeeeee;
+    font-size: 24px;
+    line-height: 1.2;
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width:511px) and (max-width:810px) {
+  .slidetext h1 {
+    margin-top: 30vh;
+    text-align: center;
+    font-family: Gotham Light, sans-serif;
+    color: #eeeeee;
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width:811px) {
+  .slidetext h1 {
+    margin-top: 30vh;
+    text-align: center;
+    font-family: Gotham Light, sans-serif;
+    color: #eeeeee;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+}
+
+#leftarrow, #rightarrow {
+  cursor: pointer;
+  position: absolute;
+  margin-top: -80px;
+  display: block;
+  width:50px;
+  height:75px;
+  background-image: url(../img/icon_arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+}
+
+#leftarrow {
+}
+
+#rightarrow {
+  transform: rotate(0deg);
+  right: 0px;
+  text-align: right;
+}
+
+.photos {
+  width:100%;
+  height:100vh;
+}
+
+#speakers {
+  width:100%;
+  height: 100vh;
+  background-image: url(../img/meetspeakers.jpg)
+}
 
 .pulseline {
 
+}
+
+.section.details {
+  height: 140vh;
+  background-color: #333333;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.details .container {
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+
+.section.details .aboutcolumn{
+  display: block;
+  width: 50%;
+  float: left;
+  padding-top: 0;
+  text-align: center;
+}
+
+.section.details .aboutText h1 {
+  padding-top: 0;
+  text-align: center;
+}
+
+.section.details .aboutText {
+  padding: 0 0;
+}
+
+.section.details .aboutLogo {
+  display: block;
+  margin: auto;
+}
+
+.section.details .content {
+  font-family: Gotham Light, sans-serif;
+  color: #dddddd;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  max-width: 520px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+@media screen and (min-width:521px) {
+    .section.details h2 {
+    padding-top: 30px;
+    font-family: Gotham Bold, sans-serif;
+    color: #dddddd;
+    text-align: center;
+    text-transform: ;
+    font-size: 36px;
+    margin-bottom: -5px;
+  }
+  .section.details .content p{
+    font-family: Gotham Light, sans-serif;
+    color: #dddddd;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 16px;
+    max-width: 520px;
+    padding: 0 50px;
+    margin: auto;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width:520px) {
+    .section.details h2 {
+    padding-top: 10px;
+    font-family: Gotham Bold, sans-serif;
+    color: #dddddd;
+    text-align: center;
+    text-transform: ;
+    font-size: 24px;
+    margin-bottom: -5px;
+  }
+  .section.details .content p{
+    font-family: Gotham Light, sans-serif;
+    color: #dddddd;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 16px;
+    max-width: 520px;
+    padding: 0 50px;
+    margin: auto;
+    margin-top: 10px;
+  }
+}
+
+.container h3 {
+  width: 200px;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fde700;
+  color: #000000;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Gotham Light", sans-serif;
+}
+
+.section.speakers {
+  height: 140vh;
+  background-color: #f6d452;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.onethirdcolumn {
+  display: block;
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+.section.speakers .sectionheader h1 {
+  color: #333333;
+}
+
+.section.slideshow {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/applynow1.jpg);
+  background-size: cover;
+  background-position: 50% 10%;
+  height: 92vh;
+}
+
+.section.slideshow .sectionheader h1 {
+  margin-top: 30vh;
+}
+
+.section.slideshow .sectionheader h2 {
+  color: #eeeeee;
+  text-align: center;
+}
+
+.section.slideshow span {
+  color: #fde700;
+}
+
+.centeralign {
+  text-align: center;
+}
+
+.section.contact {
+  height: 92vh;
+  background-color: #222222;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.contact h2 {
+  margin-top: 10vh;
+  text-align: center;
+  color: #eeeeee;
+}
+
+.contact .applyNow {
+  text-transform: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.contact p {
+  color: #cccccc;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 10vh;
+  padding: 50px;
 }
