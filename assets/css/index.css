@@ -335,9 +335,6 @@ body {
 }
 
 
-.centeralign {
-}
-
 @media screen and (max-width: 810px){
   .aboutcolumn, .aboutText {
     width: 100%;
@@ -510,12 +507,6 @@ body {
   height:100vh;
 }
 
-#speakers {
-  width:100%;
-  height: 100vh;
-  background-image: url(../img/meetspeakers.jpg)
-}
-
 .pulseline {
 
 }
@@ -563,6 +554,7 @@ body {
   font-size: 16px;
   max-width: 520px;
   padding: 0 20px;
+  padding-bottom: 20px;
   margin: auto;
 }
 
@@ -615,7 +607,7 @@ body {
 .container h3 {
   width: 200px;
   margin-top: 30px;
-  padding: 20px;
+  padding: 15px;
   background-color: #fde700;
   color: #000000;
   display: inline-block;
@@ -625,7 +617,7 @@ body {
 }
 
 .section.speakers {
-  min-height: 140vh;
+  min-height: 145vh;
   background-color: #f6d452;
   background-size: cover;
   background-repeat: no-repeat;
@@ -691,7 +683,7 @@ body {
   margin: 0 auto;
   padding: 10px;
   background-color: #222222;
-  color: #dddddd;
+  color: #eeeeee;
 }
 
 .row p {
@@ -799,9 +791,12 @@ body {
 }
 
 .section.contact h2 {
-  margin-top: 10vh;
   text-align: center;
   color: #eeeeee;
+  max-width: 90%;
+  display: block;
+  margin: auto;
+  margin-top: 10vh;
 }
 
 .contact .applyNow {
