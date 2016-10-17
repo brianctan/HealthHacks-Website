@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
   <title>HealthHacks PH - The Premier Health Hackathon for Students</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
-  <link rel="stylesheet" href="assets/css/index.css" />
+  <link type="text/css" rel="stylesheet" href="assets/css/index.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +20,7 @@
         <div><a href="" class="applyNow">Apply Now</a></div>
       </div>
     </div>
+    <br class="clear" />
   </div>
   <div class="section about">
       <div class="customNavbar" id="navbar">
@@ -45,6 +44,16 @@
           </ul>
         </div>
         <div id="hamburger"></div>
+        <div class="menu" id="menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Lineup</a></li>
+          <li><a href="">Details</a></li>
+          <li><a href="">Program</a></li>
+          <li><a href="">Speakers</a></li>
+          <li><a href="">FAQs</a></li>
+          <li><a href="">Sponsors</a></li>
+          <li><a href="">Contact Us</a></li>
+        </div>
       </div>
       <div class="centeralign">
         <div class="aboutcolumn">
@@ -167,6 +176,21 @@
           document.getElementById("navbar").className = "customNavbar fixed";
         } else{
           document.getElementById("navbar").className = "customNavbar";
+        }
+      }, false);
+    }, false);
+  </script>
+  <script>
+    window.addEventListener("load", function(){
+      document.getElementById('hamburger').addEventListener("click", function(){
+        var ham = document.getElementById('hamburger');
+        var links = document.getElementById('menu');
+        if(ham.className == "arrow"){
+          links.className = "menu";
+          ham.className = "";
+        } else{
+          links.className = "menu show";
+          ham.className = "arrow";
         }
       }, false);
     }, false);

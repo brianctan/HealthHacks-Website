@@ -36,7 +36,7 @@ body {
 .section {
   background-color: black;
   display: block;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ body {
   min-height: 500px;
   background-color: black;
   display: block;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section.about {
@@ -54,7 +54,7 @@ body {
 }
 
 .splashbg {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -112,7 +112,7 @@ body {
   display: inline-block;
   text-align: center;
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 3px;
   background-color: #fde700;
   text-transform: uppercase;
@@ -179,11 +179,49 @@ body {
   .navlinks {
     display: none;
   }
+  .menu {
+    background-color: #f6d452;
+    width: 40%;
+    position: absolute;
+    top:60px;
+    right: -50vw;
+    transition: all 0.3s;
+  }
+  .menu.show{
+    background-color: #f6d452;
+    width: 180px;
+    position: absolute;
+    top:60px;
+    right:0px;
+  }
+  .menu li {
+    list-style: none;
+    line-height: 1.5;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .menu li:hover {
+      background-color: #eeeeee;
+      cursor: pointer;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: #000000;
+  }
+  #hamburger.arrow{
+    background-position: bottom left;
+    transform: rotate(90deg);
+  }
 }
 
 @media screen and (min-width: 993px){
   #hamburger {
       display: none;
+  }
+  .menu {
+    display: none;
   }
 }
 
@@ -323,7 +361,7 @@ body {
     letter-spacing: 5px;
   }
   .section.about{
-    height: 150vh;
+    min-height: 120vh;
   }
   .content p{
     font-family: Gotham Light, sans-serif;
@@ -482,7 +520,7 @@ body {
 }
 
 .section.details {
-  height: 140vh;
+  min-height: 140vh;
   background-color: #333333;
   background-size: cover;
   background-repeat: no-repeat;
@@ -586,7 +624,7 @@ body {
 }
 
 .section.speakers {
-  height: 140vh;
+  min-height: 140vh;
   background-color: #f6d452;
   background-size: cover;
   background-repeat: no-repeat;
@@ -607,7 +645,7 @@ body {
   background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/applynow1.jpg);
   background-size: cover;
   background-position: 50% 10%;
-  height: 92vh;
+  min-height: 92vh;
 }
 
 .section.slideshow .sectionheader h1 {
@@ -628,7 +666,7 @@ body {
 }
 
 .section.contact {
-  height: 92vh;
+  min-height: 92vh;
   background-color: #222222;
   background-size: cover;
   background-repeat: no-repeat;
@@ -650,6 +688,6 @@ body {
   color: #cccccc;
   text-align: center;
   line-height: 1.5;
-  margin-top: 10vh;
+  margin-top: 5vh;
   padding: 50px;
 }
