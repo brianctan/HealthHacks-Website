@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HealthHacks PH - The Premier Health Hackathon for Students</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="assets/css/index.css" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+  <div class="section about">
+      <div class="customNavbar fixed" id="navbar">
+        <div class="logoDiv">
+          <img src="assets/img/Yellow Logo.png" class="logoImage"/>
+          <div class="logoText"><span>Health</span>Hacks</div>
+        </div>
+        <div class="navlinks">
+          <ul class="floatRight">
+            <a href=""><li>Apply Now</li></a>
+          </ul>
+          <ul class="floatLeft">
+            <li><a href="#about">About</a></li>
+            <li><a href="#lineup">Lineup</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div id="hamburger"></div>
+        <div class="menu" id="menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Lineup</a></li>
+          <li><a href="">Details</a></li>
+          <li><a href="">Program</a></li>
+          <li><a href="">Speakers</a></li>
+          <li><a href="">FAQs</a></li>
+          <li><a href="">Sponsors</a></li>
+          <li><a href="">Contact Us</a></li>
+        </div>
+      </div>
+      <div class="centeralign">
+      </div>
+      <br class="clear">
+  </div>
+
+  <script>
+    window.addEventListener("load", function(){
+      document.getElementById('hamburger').addEventListener("click", function(){
+        var ham = document.getElementById('hamburger');
+        var links = document.getElementById('menu');
+        if(ham.className == "arrow"){
+          links.className = "menu";
+          ham.className = "";
+        } else{
+          links.className = "menu show";
+          ham.className = "arrow";
+        }
+      }, false);
+    }, false);
+  </script>
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/learn-jquery.js"></script>
+</body>
+</html>

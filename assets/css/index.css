@@ -34,11 +34,11 @@
 
 @keyframes wobble{
   0%{
-    transform: rotate(-5deg);
+    transform: translate(0px, 0px) rotate(-5deg);
   }
 
   100%{
-    transform: rotate(5deg);
+    transform: translate(-20px, 0px) rotate(5deg);
   }
 }
 
@@ -94,7 +94,7 @@ body {
   padding-top: 50px;
   margin-top: 180px;
   margin-bottom: 40px;
-  animation-name: scale;
+  animation-name: ;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -104,7 +104,7 @@ body {
 #stethoscope {
   position: absolute;
   top:10%;
-  left: 30%;
+  left: calc(50% - 250px);
   width: 150px;
   animation-name: wobble;
   animation-duration: 1s;
@@ -186,6 +186,7 @@ body {
   left: 0;
   width: 100%;
   box-shadow: 1px 1px 5px #555555;
+  z-index: 10;
 }
 
 .logoDiv{
