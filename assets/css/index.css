@@ -32,13 +32,33 @@
     }
 }
 
-@keyframes wobble{
+@keyframes wobbleleft{
+  0%{
+    transform: translate(0px, 0px) rotate(5deg);
+  }
+
+  100%{
+    transform: translate(0px, 0px) rotate(-5deg);
+  }
+}
+
+@keyframes wobblemore{
+  0%{
+    transform: translate(0px, 0px) rotate(20deg);
+  }
+
+  100%{
+    transform: translate(0px, 0px) rotate(-20deg);
+  }
+}
+
+@keyframes wobbleright{
   0%{
     transform: translate(0px, 0px) rotate(-5deg);
   }
 
   100%{
-    transform: translate(-20px, 0px) rotate(5deg);
+    transform: translate(0px, 0px) rotate(5deg);
   }
 }
 
@@ -65,10 +85,13 @@ body {
 }
 
 .section.splashscreen {
-  min-height: 500px;
   background-color: black;
   display: block;
   min-height: 100vh;
+}
+
+.section.splashscreen .applyNow {
+  margin-bottom: 30px;
 }
 
 .section.about {
@@ -101,33 +124,115 @@ body {
   animation-timing-function: cubic-bezier(.40, 0, .60, 1);
 }
 
+.laptop {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  max-height: 200px;
+  margin: auto;
+  padding-top: 50px;
+  margin-top: 180px;
+  margin-bottom: 40px;
+  animation-name: ;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.40, 0, .60, 1);
+}
+
 #stethoscope {
   position: absolute;
   top:10%;
-  left: calc(50% - 250px);
-  width: 150px;
-  animation-name: wobble;
+  left: calc(50% - 230px);
+  width: 160px;
+  animation-name: wobbleleft;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: cubic-bezier(.40, 0, .60, 1);
 }
 
-@media screen and (max-width: 680px){
+#vr {
+  position: absolute;
+  top:16%;
+  left: calc(50% + 100px);
+  width: 150px;
+  animation-name: wobbleright;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.40, 0, .60, 1);
+}
+
+#pilljar, #phone, #pill1, #pill2, #pill3, #watch {
+  position: absolute;
+  top:38%;
+  left: calc(50% - 330px);
+  width: 90px;
+  animation-name: wobbleleft;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.40, 0, .60, 1);
+}
+
+#phone {
+  left: calc(50% + 230px);
+  width: 75px;
+  animation-name: wobbleright;
+}
+
+#pill1, #pill2 {
+  top: 48%;
+  left: calc(50% - 390px);
+  width: 16px;
+}
+
+#pill2 {
+  top: 54%;
+  width: 23px;
+  left: calc(50% - 402px);
+}
+
+#pill3 {
+  top: 52%;
+  width: 13px;
+  left: calc(50% - 355px);
+}
+
+#watch {
+  width: 50px;
+  top: 45%;
+  left: calc(50% + 318px);
+  animation-name: wobbleright;
+}
+
+#pill1, #pill2, #pill3 {
+  animation-name: wobblemore;
+}
+
+@media screen and (max-width: 823px){
   .centered {
     display: block;
     box-sizing: border-box;
-    width: 50%;
+    max-height: 250px;
     margin: auto;
     padding-top: 50px;
-    margin-top: 80px;
+    margin-top: 190px;
     margin-bottom: 30px;
+  }
+  .laptop {
+    display: none;
+  }
+  #stethoscope, #vr, #pilljar, #phone, #pill1, #pill2, #pill3, #watch {
+    display: none;
   }
 }
 
-.textContainer {
-  width:100%;
-  text-align: center;
+@media screen and (min-width:824px) {
+  .centered {
+    display: none;
+  }
 }
 
 .splashText {
@@ -163,6 +268,98 @@ body {
   transition: none 200ms ease-out;
   transition-property: color, background;
 }
+
+@media screen and (min-width: 469px) and (max-width: 699px){
+  .centered {
+    max-height: 250px;
+    margin-top: 100px;
+  }
+  .splashText {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .applyNow {
+    padding: 10px 15px;
+  }
+  #stethoscope, #vr, #pilljar, #phone, #pill1, #pill2, #pill3, #watch {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 823px){
+  .centered {
+    max-height: 300px;
+    margin-top: 60px;
+  }
+  .splashText {
+    font-size: 36px;
+  }
+  .applyNow {
+    padding: 10px 15px;
+  }
+  #stethoscope, #vr, #pilljar, #phone, #pill1, #pill2, #pill3, #watch {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 468px){
+  .centered {
+    max-height: 200px;
+    padding-top: 20px;
+    margin-top: 140px;
+    margin-bottom: 30px;
+  }
+  .splashText {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-family: "Gotham Bold", sans-serif;
+    font-size: 26px;
+    color: #fde700;
+    line-height: 1.2;
+  }
+  .subText {
+    color: #eeeeee;
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-family: "Gotham Light", sans-serif;
+    font-size: 16px;
+    color: #eeeeee;
+    line-height: 1.5;
+  }
+  .applyNow {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #fde700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    transition: none 200ms ease-out;
+    transition-property: color, background;
+  }
+  #stethoscope, #vr, #pilljar, #phone, #pill1, #pill2, #pill3, #watch {
+    position: absolute;
+    top:38%;
+    left: 50%;
+    animation-name: wobbleleft;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.40, 0, .60, 1);
+    display: none;
+  }
+}
+
+.textContainer {
+  width:100%;
+  text-align: center;
+}
+
+
 
 .applyNow:hover{
   text-decoration: none;
