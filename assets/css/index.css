@@ -18,6 +18,30 @@
   src: url(fonts/Melbourne.otf);
 }
 
+@keyframes scale{
+    0%{
+      transform: translate(0px, 0px);
+    }
+
+    50%{
+      transform: rotate(0) scale(1.15, 1.15);
+    }
+
+    100%{
+      transform: translate(0px, 0px);
+    }
+}
+
+@keyframes wobble{
+  0%{
+    transform: rotate(-5deg);
+  }
+
+  100%{
+    transform: rotate(5deg);
+  }
+}
+
 html {
   font-family: sans-serif;
 }
@@ -65,17 +89,35 @@ body {
   display: block;
   box-sizing: border-box;
   width: auto;
-  max-height: 350px;
+  max-height: 200px;
   margin: auto;
   padding-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 180px;
+  margin-bottom: 40px;
+  animation-name: scale;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.40, 0, .60, 1);
+}
+
+#stethoscope {
+  position: absolute;
+  top:10%;
+  left: 30%;
+  width: 150px;
+  animation-name: wobble;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.40, 0, .60, 1);
 }
 
 @media screen and (max-width: 680px){
   .centered {
     display: block;
     box-sizing: border-box;
-    width: 80%;
+    width: 50%;
     margin: auto;
     padding-top: 50px;
     margin-top: 80px;
@@ -404,7 +446,6 @@ body {
   background-size: cover;
   background-position: 50% 10%;
   height: 91vh;
-  display: none;
 }
 
 .slideshow2 {
@@ -483,7 +524,7 @@ body {
 #leftarrow, #rightarrow {
   cursor: pointer;
   position: absolute;
-  margin-top: -80px;
+  margin-top: -360px;
   display: block;
   width:50px;
   height:75px;
@@ -554,8 +595,12 @@ body {
   font-size: 16px;
   max-width: 520px;
   padding: 0 20px;
-  padding-bottom: 20px;
   margin: auto;
+}
+
+
+.section.details .content.marginbottom {
+  padding-bottom: 50px;
 }
 
 @media screen and (min-width:521px) {
@@ -713,7 +758,7 @@ body {
 
 .section.sponsors {
   min-height: 91vh;
-  background-color: #eeeeee;
+  background-color: #dddddd;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -756,7 +801,62 @@ body {
 
 .section.questions {
   min-height: 140vh;
-  background-color: #dddddd;
+  background-color: #eeeeee;
+}
+
+.maxwidth {
+  max-width: 600px;
+  display: block;
+  margin: auto;
+  padding: 50px;
+  padding-left: 100px;
+}
+
+.question {
+  text-align: left;
+  font-family: Gotham Bold, sans-serif;
+  color: #222222;
+  font-size: 20px;
+  position: relative;
+  padding-left: 30px;
+  display: block;
+  margin: auto;
+}
+
+ .answer {
+   text-align: left;
+   font-family: Gotham Light, sans-serif;
+   color: #222222;
+   font-size: 16px;
+   line-height: 1.5;
+   position: relative;
+   padding-left: 30px;
+   display: block;
+   margin: auto;
+   margin-top: 50px;
+ }
+
+.question:before{
+  font-family: Gotham Bold, sans-serif;
+  position: absolute;
+  left: -50px;
+  font-size: 50px;
+  content: "Q:";
+  color: #222222;
+  margin-top: -10px;
+}
+
+.answer:before{
+  font-family: Gotham Bold, sans-serif;
+  position: absolute;
+  left: -50px;
+  font-size: 50px;
+  content: "A:";
+  color: #222222;
+  margin-top: -10px;
+}
+
+.sentence {
 }
 
 .section.slideshow {
