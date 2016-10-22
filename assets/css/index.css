@@ -1113,3 +1113,68 @@ body {
   margin-top: 5vh;
   padding: 50px;
 }
+
+div.formContent {
+  margin-top: 100px;
+}
+
+div.formContent h1 {
+  font-family: Gotham Bold, sans-serif;
+  color: #dddddd;
+  text-align: left;
+  font-size: 38px;
+  margin-bottom: -5px;
+  letter-spacing: 1.5px;
+}
+
+div.formContent div.box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  color: #CCC;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+label {
+  font-size: 20px;
+  color: #cccccc;
+  line-height: 2rem;
+  text-align: left;
+}
+
+label input {
+  font-size: 20px;
+  width: 100%;
+  color: #cccccc;
+  background-color: #222222;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #CCC;
+  border-bottom-width: 1px;
+  font-family: "Gotham Light", sans-serif;
+}
+
+label input:focus {
+  border-bottom-color: #fde700;
+  color: #fde700;
+  outline: none;
+}
+input.submitButton {
+  padding: 1em 3em;
+  font-family: "Gotham Light", sans-serif;
+  border: none;
+  border-radius: 0.25em;
+  background-color: #FDE700;
+  color: #222;
+  float: right;
+}
+
+form * {
+  transition: 0.5s;
+}
