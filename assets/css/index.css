@@ -1158,6 +1158,7 @@ label input {
   border-bottom-color: #CCC;
   border-bottom-width: 1px;
   font-family: "Gotham Light", sans-serif;
+  -webkit-border-radius: 0;
 }
 
 label input:focus {
@@ -1173,6 +1174,7 @@ input.submitButton {
   background-color: #FDE700;
   color: #222;
   float: right;
+  -webkit-appearance: none;
 }
 
 form * {
