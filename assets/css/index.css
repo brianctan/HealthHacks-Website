@@ -1161,6 +1161,10 @@ label input {
   -webkit-border-radius: 0;
 }
 
+label input.other {
+  display: none;
+}
+
 label input:focus {
   border-bottom-color: #fde700;
   color: #fde700;
