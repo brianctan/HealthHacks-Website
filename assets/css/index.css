@@ -1137,13 +1137,13 @@ div.formContent div.box {
 form {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 75%;
 }
 
 label {
   font-size: 20px;
   color: #cccccc;
-  line-height: 2rem;
+  line-height: 2.5rem;
   text-align: left;
 }
 
@@ -1166,6 +1166,12 @@ label input:focus {
   color: #fde700;
   outline: none;
 }
+
+label p {
+  font-size: 16px;
+  line-height: 1;
+}
+
 input.submitButton {
   padding: 1em 3em;
   font-family: "Gotham Light", sans-serif;
@@ -1175,6 +1181,36 @@ input.submitButton {
   color: #222;
   float: right;
   -webkit-appearance: none;
+  margin-bottom: 1rem;
+}
+
+input[type=radio], input[type=checkbox] {
+  width: auto;
+  background: #fde700;
+  visibility: hidden;
+  position: absolute;
+}
+
+input[type=radio] + label:before,
+input[type=checkbox] + label:before{
+  height:12px;
+  width:12px;
+  margin-right: 2px;
+  content: "  ";
+  display:inline-block;
+  vertical-align: baseline;
+  border:1px solid #EEE;
+}
+input[type=radio]:checked + label:before,
+input[type=checkbox]:checked + label:before{
+  background:#FDE700;
+}
+
+input[type=radio] + label:before{
+  border-radius:50%;
+}
+input[type=checkbox] + label:before{
+  border-radius:2px;
 }
 
 form * {
