@@ -84,23 +84,47 @@
       </div>
   </div>
 
-  <div class="section slideshow1">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#myCarousel" data-slide-to="1"></li>
+  <li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
 
-    <div class="photos">
-      <div>
-        <div class="sectionheader">
-          <h1>What's In Store</h1>
-        </div>
-        <div class="slidetext">
-          <h1>Meet inspiring speakers and mentors.</h1>
-        </div>
-      </div>
-      <div id="students"><img></div>
-      <div id="prizes"><img></div>
+<!-- Wrapper for slides -->
+<h1>What's In Store</h1>
+<div class="carousel-inner" role="listbox">
+  <div class="item active">
+    <div class="slideshow1"></div>
+    <div class="carousel-caption">
+        <h3>Meet inspiring speakers and mentors.</h3>
     </div>
-    <div><a id="leftarrow"></a></div>
-    <div><a href="" id="rightarrow"></a></div>
   </div>
+
+  <div class="item">
+    <div class="slideshow2"></div>
+    <div class="carousel-caption">
+        <h3>Network with other talented students.</h3>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="slideshow3"></div>
+    <div class="carousel-caption">
+        <h3>Have lots of fun and win prizes!</h3>
+    </div>
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+</a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+</a>
+<div><a id="leftarrow"></a></div>
+<div><a href="" id="rightarrow"></a></div>
+</div>
 
   <div class="section details">
     <div class="container">
@@ -339,6 +363,7 @@ then you can definitely join HealthHacks!
     }, false);
   </script>
   <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
   <script type="text/javascript" src="assets/js/learn-jquery.js"></script>
 </body>
 </html>
