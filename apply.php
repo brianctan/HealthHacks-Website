@@ -27,9 +27,13 @@ else $hipster = "No";
 $overnight	= str_replace(",", "", $_POST['overnight']);
 $survey		= str_replace(",", "", $_POST['survey']);
 
+if ($year == "Other") {
+  $year = str_replace(",", "", $_POST['yearOther']);
+}
+
 $job = new Google_Spreadsheets_AppendRow(new Temboo_Session($config["TEMBOO"]["USERNAME"], $config["TEMBOO"]["APP"], $config["TEMBOO"]["KEY"]));
 $input = $job->newInputs();
-$input  ->setRowData("$timestamp,$fname,$lname,$age,$school,$year,$course,$email,$cell,$team,$size,$allergies,$hacker,$hustler,$healthHunk,$hipster,$overnight,$survey")
+$input  ->setRowData("$timestamp ,$fname ,$lname ,$age ,$school ,$year ,$course ,$email ,$cell ,$team, $size ,$allergies ,$hacker ,$hustler ,$healthHunk ,$hipster ,$overnight ,$survey ")
 		->setSpreadsheetTitle($config["GOOGLE"]["FILE"])
 		->setRefreshToken($config["GOOGLE"]["REFRESH_TOKEN"])
 		->setClientSecret($config["GOOGLE"]["CLIENT_SECRET"])
