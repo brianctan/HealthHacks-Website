@@ -662,15 +662,12 @@ body {
   text-align: center;
 }
 
-
-
 .applyNow:hover{
   text-decoration: none;
   background-color: #24e168;
   box-sizing: border-box;
   color: white;
 }
-
 
 .customNavbar {
   background-color: #fde700;
@@ -749,7 +746,6 @@ body {
       background-color: #eeeeee;
       cursor: pointer;
   }
-
   .menu a {
     text-decoration: none;
     color: #000000;
@@ -860,6 +856,10 @@ body {
 .floatRight li:hover {
   background-color: #24e168;
   color: white;
+}
+
+.floatRight.aboutbutton li:hover {
+  background-color: #EF4C26;
 }
 
 .aboutcolumn, .aboutText {
@@ -1515,8 +1515,42 @@ div.formContent h1 {
 div.formContent div.box {
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  max-width: 1000px;
   color: #CCC;
+}
+
+div.box h1, div.box .formsubtext {
+  text-align: center;
+  color: #dddddd;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+div.box p {
+  line-height: 1.2;
+}
+
+div.box label p {
+  text-align: left;
+  margin: 0px;
+}
+
+div.box .leftalign {
+  text-align: left;
+  color: #dddddd;
+}
+
+div.box .formsubtext {
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.smallertext {
+  font-size: 14px;
+  padding-bottom: 10px;
+  color: #cccccc;
 }
 
 form {
@@ -1526,16 +1560,25 @@ form {
 }
 
 label {
-  font-size: 20px;
-  color: #cccccc;
+  font-size: 16px;
+  color: #dddddd;
   line-height: 2.5rem;
   text-align: left;
 }
 
+#lastlabel {
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.lastplabel {
+  padding-bottom: 20px;
+}
+
 label input {
-  font-size: 20px;
+  font-size: 22px;
   width: 100%;
-  color: #cccccc;
+  color: #999999;
   background-color: #222222;
   border-top: none;
   border-left: none;
@@ -1544,6 +1587,13 @@ label input {
   border-bottom-width: 1px;
   font-family: "Gotham Light", sans-serif;
   -webkit-border-radius: 0;
+  transition: none 200ms ease-out;
+  transition-property: all, background;
+  animation-name: ;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.40, 0, .60, 1);
 }
 
 label input.other {
@@ -1568,9 +1618,19 @@ input.submitButton {
   border-radius: 0.25em;
   background-color: #FDE700;
   color: #222;
-  float: right;
+  float: left;
   -webkit-appearance: none;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 15px;
+}
+
+input.submitButton:hover{
+  text-decoration: none;
+  background-color: #24e168;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
 }
 
 input[type=radio], input[type=checkbox] {
@@ -1578,21 +1638,38 @@ input[type=radio], input[type=checkbox] {
   background: #fde700;
   visibility: hidden;
   position: absolute;
+  font-size: 22px;
 }
 
 input[type=radio] + label:before,
 input[type=checkbox] + label:before{
   height:12px;
   width:12px;
-  margin-right: 2px;
-  content: "  ";
+  margin-right: 15px;
+  content: "     ";
   display:inline-block;
-  vertical-align: baseline;
+  vertical-align: top;
+  margin-top: 12px;
   border:1px solid #EEE;
+  transition: none 300ms ease-out;
+  transition-property: all, background;
 }
+
 input[type=radio]:checked + label:before,
 input[type=checkbox]:checked + label:before{
   background:#FDE700;
+  animation-name: scalebig;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+@keyframes scalebig {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }
 
 input[type=radio] + label:before{
@@ -1604,4 +1681,61 @@ input[type=checkbox] + label:before{
 
 form * {
   transition: 0.5s;
+}
+
+#yearLevel {
+  line-height: 2.5rem;
+}
+
+@media screen and (max-width:459px) {
+  div.box .formsubtext {
+    font-size: 12px;
+  }
+  label {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  #yearLevel, #shirtSize, #identity{
+    line-height: 1.5rem;
+  }
+  #overnight {
+    margin-top: 5px;
+    line-height: 1.5rem;
+  }
+
+  #overnight input[type=radio] + label:before, #overnight
+  input[type=checkbox] + label:before {
+  }
+
+  div.box h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  div.box label p {
+    font-size: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  label input {
+    font-size: 16px;
+  }
+  input[type=radio] + label:before,
+  input[type=checkbox] + label:before {
+    margin-top: 6px;
+    height:10px;
+    width:10px;
+  }
+  .smallertext {
+    font-size: 10px;
+    padding-bottom: 3px;
+    padding-top: 5px;
+  }
+  label input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .leftalign {
+    font-size: 10px;
+    margin-top: 0px;
+  }
 }
