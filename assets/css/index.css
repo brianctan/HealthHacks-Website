@@ -642,17 +642,7 @@ body {
     line-height: 1.5;
   }
   .applyNow {
-    display: inline-block;
-    text-align: center;
-    margin-top: 10px;
     padding: 10px 15px;
-    border-radius: 3px;
-    background-color: #fde700;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-    transition: none 200ms ease-out;
-    transition-property: color, background;
   }
   #stethoscope, #vr, #pilljar, #phone, #pill1, #pill2, #pill3, #watch {
     position: absolute;
@@ -676,9 +666,9 @@ body {
 
 .applyNow:hover{
   text-decoration: none;
-  background-color: black;
-  border: 1px solid #fde700;
-  color: #fde700;
+  background-color: #24e168;
+  box-sizing: border-box;
+  color: white;
 }
 
 
@@ -736,15 +726,16 @@ body {
     background-color: #f6d452;
     width: 40%;
     position: absolute;
-    top:60px;
+    top:61px;
     right: -50vw;
     transition: all 0.3s;
+    box-shadow: 1px 1px 5px #555555;
   }
   .menu.show{
     background-color: #f6d452;
     width: 180px;
     position: absolute;
-    top:60px;
+    top:61px;
     right:0px;
   }
   .menu li {
@@ -786,6 +777,18 @@ body {
   color: black;
   float:left;
   text-transform: uppercase;
+}
+
+.logoText a{
+  text-decoration: none;
+}
+
+.logoText a:visited{
+  color: black;
+}
+
+.menu .class {
+  background-color: black;
 }
 
 .logoDiv span{
@@ -847,21 +850,16 @@ body {
   text-transform: uppercase;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 8px;
-  margin-top: -9px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: -14px;
   transition: none 200ms ease-out;
   transition-property: color, background;
 }
 
 .floatRight li:hover {
-  text-transform: uppercase;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: black;
-
-  padding: 8px;
-  margin-top: -9px;
-  color: #fde700;
+  background-color: #24e168;
+  color: white;
 }
 
 .aboutcolumn, .aboutText {
@@ -925,6 +923,11 @@ body {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 450px){
+  .content {
+    padding-bottom: 30px;
+  }
+}
 
 @media screen and (min-width: 811px){
   .aboutText h1 {
@@ -966,6 +969,10 @@ body {
 
 .slideshow3 {
   background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(../img/funandprizes3.jpg);
+}
+
+.sectionheader {
+  padding: 0 20px;
 }
 
 @media screen and (max-width:518px) {
@@ -1152,6 +1159,13 @@ body {
   font-family: "Gotham Light", sans-serif;
 }
 
+.questions .container {
+  display: block;
+  margin: auto;
+  max-width: 1000px;
+
+}
+
 .section.speakers {
   min-height: 145vh;
   background-color: #f6d452;
@@ -1203,13 +1217,6 @@ body {
   }
 }
 
-@media screen and (max-width:634px) {
-  .onethirdcolumn {
-    width: 100%;
-    float:left;
-  }
-}
-
 .onethirdcolumn h4 {
   font-family: Gotham Bold, sans-serif;
   font-size: 16px;
@@ -1222,7 +1229,7 @@ body {
   color: #eeeeee;
 }
 
-.row p {
+.speakers .row p {
   width: 55%;
   text-align: center;
   display: block;
@@ -1230,6 +1237,36 @@ body {
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.2;
+}
+
+.questions .row {
+  background-color: #f6d452;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  margin-top: -8px;
+  border-radius: 5px;
+}
+
+.questions .onethirdcolumn {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.questions .sectionheader {
+  margin-bottom: 30px;
+}
+
+.lastrow {
+  margin-bottom: 50px;
+}
+
+.questions .row p {
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 .lessmarginrow p {
@@ -1240,6 +1277,55 @@ body {
   margin-top: 10px;
   font-size: 14px;
   line-height: 1.2;
+}
+
+.onethirdcolumn a {
+  color: #092BAD;
+}
+
+@media screen and (max-width:634px) {
+  .onethirdcolumn {
+    width: 100%;
+    float:left;
+  }
+  .questions .onethirdcolumn {
+    margin-bottom: 30px;
+  }
+  .questions .container {
+    width:90%;
+  }
+  .questions .row {
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
+  .questions .firstrow {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 635px) and (max-width:920px) {
+  .questions .onethirdcolumn {
+    width: 100%;
+    float:left;
+  }
+  .questions .onethirdcolumn {
+    margin-bottom: 30px;
+  }
+  .questions .container {
+    width:90%;
+  }
+  .questions .row {
+    padding-bottom: 0px;
+    padding-top: 10px;
+  }
+  .questions .firstrow {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 920px) and max-width (1039px) {
+  .questions .container {
+  }
 }
 
 .bold {
@@ -1291,7 +1377,7 @@ body {
 }
 
 .section.questions {
-  min-height: 140vh;
+  min-height: 145vh;
   background-color: #eeeeee;
 }
 
@@ -1309,9 +1395,13 @@ body {
   color: #222222;
   font-size: 20px;
   position: relative;
-  padding-left: 30px;
   display: block;
   margin: auto;
+  line-height: 1.2;
+}
+
+.questions .onethirdcolumn p {
+  text-align: left;
 }
 
  .answer {
@@ -1327,7 +1417,7 @@ body {
    margin-top: 50px;
  }
 
-.question:before{
+/*.question:before{
   font-family: Gotham Bold, sans-serif;
   position: absolute;
   left: -50px;
@@ -1335,7 +1425,7 @@ body {
   content: "Q:";
   color: #222222;
   margin-top: -10px;
-}
+}*/
 
 .answer:before{
   font-family: Gotham Bold, sans-serif;
@@ -1359,11 +1449,13 @@ body {
 
 .section.slideshow .sectionheader h1 {
   margin-top: 30vh;
+  text-shadow: 0 2px 2px rgba(0,0,0,.6);
 }
 
 .section.slideshow .sectionheader h2 {
   color: #eeeeee;
   text-align: center;
+  text-shadow: 0 2px 2px rgba(0,0,0,.6);
 }
 
 .section.slideshow span {
