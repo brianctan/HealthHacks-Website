@@ -40,7 +40,7 @@ $input  ->setRowData("$timestamp ,$fname ,$lname ,$age ,$school ,$year ,$course 
 		->setClientID($config["GOOGLE"]["CLIENT_ID"]);
 try {
 	$result = $job->execute($input)->getResults();
-	$message = "Your application has been sent and is being processed. Have a Nice Day! :)";
+	$message = "Thank you for registering for HealthHacks PH 2017! Your application has been sent and is being processed. We hope to see you soon!";
 }
 catch(Exception $e) {
 	$message = "It seems like an error occured while trying to process your application. Please check back later.<br><br>";
@@ -53,7 +53,7 @@ catch(Exception $e) {
 <head>
   <title>HealthHacks PH - The Premier Health Hackathon for Students</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
   <link type="text/css" rel="stylesheet" href="assets/css/index.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
@@ -62,32 +62,16 @@ catch(Exception $e) {
       <div class="customNavbar fixed" id="navbar">
         <div class="logoDiv">
           <img src="assets/img/Yellow Logo.png" class="logoImage"/>
-          <div class="logoText"><span>Health</span>Hacks</div>
+          <div class="logoText"><a href="index.html"><span>Health</span>Hacks</a></div>
         </div>
         <div class="navlinks">
-          <ul class="floatRight">
-            <a href=""><li>Apply Now</li></a>
-          </ul>
-          <ul class="floatLeft">
-            <li><a href="#about">About</a></li>
-            <li><a href="#lineup">Lineup</a></li>
-            <li><a href="#details">Details</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+          <ul class="floatRight aboutbutton">
+            <a href="index.html"><li>Back to Home</li></a>
           </ul>
         </div>
         <div id="hamburger"></div>
         <div class="menu" id="menu">
-          <li><a href="">About</a></li>
-          <li><a href="">Lineup</a></li>
-          <li><a href="">Details</a></li>
-          <li><a href="">Program</a></li>
-          <li><a href="">Speakers</a></li>
-          <li><a href="">FAQs</a></li>
-          <li><a href="">Sponsors</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a href="index.html">Back to Home</a></li>
         </div>
       </div>
       <div class="formContent">
@@ -99,8 +83,7 @@ catch(Exception $e) {
        	}
         ?>
         <h1>HealthHacks 2017 Application Form</h1>
-          <p>
-          Hey there! Thank you for showing interest in registering for HealthHacks PH 2017.<br>
+          <p class="formsubtext"><br>
           <?php echo $message; ?>
           </p>
         </div>
@@ -125,5 +108,14 @@ catch(Exception $e) {
   </script>
   <script type="text/javascript" src="assets/js/jquery.js"></script>
   <script type="text/javascript" src="assets/js/learn-jquery.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86973214-1', 'auto');
+  ga('send', 'pageview');
+  </script>
 </body>
 </html>
